@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino-visit to Burma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" type="image/x-icon" href="/images/Screenshot 2024-09-13 142916.png">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Sevillana&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      href="/C++/Web Application Development/pj-logo.jpg"
+      type="image.jpg"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        header {
+          position: relative;
+      width: 100%;
+      height: 500px;
+
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/photo_2024-09-17_20-53-32.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px); /* Apply blur to background */
+      z-index: -1; /* Make sure it's behind content */
+    }
+  
+    .logo {
+      border-radius: 50%;
+      margin-top:5px ;
+      margin-left: 30px;
+    }
+   
+    ul {
+      list-style-type: none;
+
+      margin-left: 300px;
+    }
+    li {
+      display: inline-block;
+      list-style-type: none;
+      background-color: #161D6f;
+      color: white;
+      padding: 5px 15px 5px 15px;
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-right: 30px;
+      font-weight: bold;
+      
+    }
+    .nav-link {
+      color: whitesmoke;
+    }
+    
+   
+
+    .search-container {
+      position: absolute;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      padding: 5px;
+      margin: 10px;
+      padding: 0;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      width: 150px;
+      font-size: 16px;
+      border-radius: 25px;
+    }
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 10px;
+      margin: 0;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .search-btn:hover .search-icon {
+      color: #007bff;
+    }
+    li:hover {
+      background-color: whitesmoke;
+      color: black;
+    }
+    
+    
+    .dropdown-item:hover {
+      color: rgb(36, 15, 226);
+
+    }
+
+pre {
+      color:whitesmoke;
+      font-size: 35px;
+     margin-top: 70px;
+     margin-left: 0;
+     padding-left: 0;
+     font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+    }
+    /* <!--style starter for section card--> */
+  .place{
+     width: 100%;
+    height: auto;
+        }
+    .header{
+    text-align: center;
+    margin-top: 2vw ;
+    font-size: 20px;
+    font-weight: 700px;
+    font-family: 'Poppons', sans-serif;
+    display: block;
+    font-weight: bold;
+
+}
+.header h2{
+    color: #D27C2C;   
+}
+section{
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+
+}
+.cardsection{
+    max-width:1050px;
+    position: relative;
+  
+   
+}
+.cardsection i{
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 46px;
+    background:#161D6f;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.cardsection i:first-child{
+    left: -50px;
+}
+.cardsection i:last-child{
+    right: -55px;
+}
+.cardsection .carddisplay{
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+.cardsection .carddisplay  img{
+    height: 350px;
+    width: 195px;
+    display: flex;
+    margin-left:14px;
+   margin-top: 4vw;
+    object-fit: cover; 
+    border-radius: 25px; 
+    overflow: hidden; 
+}
+.cardsection .carddisplay p{
+    font-family: 'Poppons', sans-serif; 
+    text-align: center;
+    font-size: 25px; 
+  
+    
+}
+.carddisplay img :first-child{
+    margin-left: 0px;  
+}
+@media screen and (max-width:900px) {
+    .cardsection .carddisplay  img{
+        width: calc(100%2);
+    }
+    
+}
+@media screen and (max-width:550px) {
+    .cardsection .carddisplay  img{
+        width: 100%;
+    }
+    
+}
+/* <!--second style starter for section card--> */
+.sectioncard{
+   width: 65%;
+   height: 300px;
+   background-color:whitesmoke;
+   border-radius: 25px;
+   margin-top: 10vw;
+   margin-left: 17vw;
+  
+}
+
+.sectioncard img{
+  width: 380px; 
+  height:260px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: 19px;
+  float: left;
+  overflow: hidden;
+  
+}  
+
+/* .sectiontext .sectionheader h1 h2{
+  text-align: center;
+  width: 50%;
+  float: left;
+  margin-left:30vw;
+  overflow: hidden;
+ margin-top: 4vw;
+}  */
+.sectiontext  p{
+  color: black;
+  text-indent: 25px;
+  float: left;
+  width: 55%;
+  text-align: center;
+  margin-top: 1vw;
+ 
+}
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  align-items: center; 
+  margin-left: 5vw;
+  margin-top: 2vw;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+      
+        <!--Navigation Bar-->
+        <!--Logo-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <img src="/images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="70px" height="70px">
+        
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--Home-->
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+                </li>
+                <!--Where to go-->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Where to go
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Yangon Region</a>
+                    <a class="dropdown-item" href="#">Mandalay Region</a>
+                    <a class="dropdown-item" href="#">Saging Region</a>
+                    <a class="dropdown-item" href="#">Bago Region</a>
+                    <a class="dropdown-item" href="#">Ayeyarwady</a>
+                    <a class="dropdown-item" href="#">Tanintharyi Region</a>
+                    <a class="dropdown-item" href="#">Magway Region</a>
+                    <a class="dropdown-item" href="#">Kachin State</a>
+                    <a class="dropdown-item" href="#">Kayin State</a>
+                    <a class="dropdown-item" href="#">Kayar State</a>
+                    <a class="dropdown-item" href="#">Chin State</a>
+                    <a class="dropdown-item" href="#">Mon State</a>
+                    <a class="dropdown-item" href="#">Shan State</a>
+                    <a class="dropdown-item" href="#">Rakhine State</a>
+                   
+                   </ul>
+                <!--Events & Festival-->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Events & Festival</a>
+                </li>
+                <!--About Us-->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <!--Search box-->
+                <form class="d-flex">
+                  <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+                    <input 
+                      type="text"
+                      placeholder="Search..."
+                      class="search-input"
+                    />
+                    <button class="search-btn" type="submit">
+                    </button>
+                  </div>
+                </form>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--Home page texts-->
+        <pre>
+          WELCOME TO  DESTINO 
+             TRAVEL OVER                 
+                AROUND BURMA      
+                
+        </pre>
+      </header>
+
+
+      <place><!--here is the stater for section card-->
+        <div class="header"><!--header text-->
+            <h1>SOME ATTRACTIVE DESTINATIONS</h1>
+            <h2>In Myanmar</h2>
+            </div>
+                  <section><!--a tag and img tag for cards-->
+                  <div class="cardsection"> 
+                    <i class="card arrow material-symbols-rounded" style="color: white;">arrow_back_ios</i>
+                  <div class="carddisplay">
+                  <a hred=""><img src="/images/27.jpeg" alt="no image"><p>Mount Victoria</p></a>
+                  <a hred=""><img src="/images/2023-11-20.jpg" alt="no image"><p>Mintat</p></a>
+                  <a hred=""><img src="/images/bagan.jpg" alt="no image"><p>Bagan</p></a>
+                  <a hred=""><img src="/images/hpa an.jpg" alt="no image"><p>Hpa an</p></a>
+                  <a hred=""><img src="/images/images-1.jpg" alt="no image"><p>Yangon</p></a>
+                  <a hred=""><img src="/images/IMG20221015140606.jpg" alt="no image"><p>Hpaan</p></a>
+                  <a hred=""><img src="/images/kalaw.jpg" alt="no image"><p>Inle lake</p></a>
+                  <a hred=""><img src="/images/mon.jpg" alt="no image"><p>Inle lake</p></a>
+                  <a hred=""><img src="/images/putao.jpg" alt="no image"><p>Inle lake</p></a>
+                  <a hred=""><img src="/images/Untitled.jpg" alt="no image"><p>Inle lake</p></a>
+                  
+                  
+                  </div>
+                  <i class="material-symbols-rounded" style="color: white;"> arrow_forward_ios</i>
+                  
+            </div></section></place><!--here is the end for section card//i used i tag for arrow-->
+
+            <div class="sectioncard" ><!--here is next part for section(where to go page)-->
+              <img src="/images/hpa an.jpg" width="370px" height="370px">
+             <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Yangon</p></b></div>
+              <!-- <h1 class="sectionheader">Yangon</h1> -->
+              <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+              <div><button class="button button5">Learn More</button></div>
+            </div>
+              
+
+              <div class="sectioncard" style="margin-top: 4vw;">
+                <img src="/images/baganimg.jpg" width="370px" height="370px">
+               <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Bagan</p></b></div>
+                <!-- <h1 class="sectionheader">Yangon</h1> -->
+                <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+                <div><button class="button button5">Learn More</button></div>
+              </div>
+
+              
+              <div class="sectioncard" style="margin-top: 4vw;">
+                <img src="/images/kalaw.jpg" width="370px" height="370px">
+               <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Kalaw</p></b></div>
+                <!-- <h1 class="sectionheader">Yangon</h1> -->
+                <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+                <div><button class="button button5">Learn More</button></div>
+              </div>
+
+              
+              <div class="sectioncard" style="margin-top: 4vw;">
+                <img src="/images/putao.jpg" width="370px" height="370px">
+               <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Putao</p></b></div>
+                <!-- <h1 class="sectionheader">Yangon</h1> -->
+                <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+                <div><button class="button button5">Learn More</button></div>
+              </div>
+              
+           
+
+
+</body>
+</html>
